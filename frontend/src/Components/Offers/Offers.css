@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+.description-page {
+  --description-ink: #20221e;
+  --description-muted: #76766e;
+  --description-paper: #fffdf9;
+  --description-tomato: #e84e3d;
+  --description-line: #eaded2;
+  background: radial-gradient(circle at 90% 10%, rgba(239, 159, 99, .17), transparent 26%), linear-gradient(135deg, #fff8f1 0%, #fffdfb 53%, #fff0e6 100%);
+  color: var(--description-ink);
+  font-family: 'DM Sans', sans-serif;
+  min-height: calc(100vh - 92px);
+  overflow: hidden;
+  padding: 74px 0 110px;
+}
+
+.description-intro,
+.description-section { margin: 0 auto; max-width: 1260px; padding-left: 7vw; padding-right: 7vw; }
+.description-intro { padding-bottom: 78px; }
+.description-eyebrow { color: var(--description-tomato); font-size: 11px; font-weight: 700; letter-spacing: .15em; margin: 0 0 15px; text-transform: uppercase; }
+.description-intro h1 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(58px, 10vw, 132px); font-weight: 500; letter-spacing: -.055em; line-height: .86; margin: 0; }
+.description-intro h1 span { color: var(--description-tomato); font-style: italic; }
+.description-lead { color: var(--description-muted); font-size: 16px; line-height: 1.65; margin: 28px 0 0; max-width: 470px; }
+.description-section { padding-bottom: 62px; }
+.description-section-heading { align-items: end; display: flex; gap: 24px; justify-content: space-between; }
+.description-section h2 { font-family: 'Playfair Display', Georgia, serif; font-size: clamp(36px, 5vw, 60px); font-weight: 500; letter-spacing: -.045em; line-height: .98; margin: 0; }
+.description-scroll-hint { color: var(--description-muted); font-size: 12px; }
+.offer-card-track { display: flex; gap: 20px; overflow-x: auto; padding: 28px 2px 15px; scrollbar-width: none; }
+.offer-card-track::-webkit-scrollbar { display: none; }
+.offer-card { background: rgba(255, 253, 249, .9); border: 1px solid rgba(234, 222, 210, .9); border-radius: 7px; box-shadow: 0 13px 34px rgba(102, 56, 28, .07); flex: 0 0 min(340px, 78vw); overflow: hidden; transition: box-shadow .2s ease, transform .2s ease; }
+.offer-card-link { color: inherit; display: block; text-decoration: none; }
+.offer-card-link:focus-visible { border-radius: 7px; outline: 3px solid rgba(232, 78, 61, .45); outline-offset: 4px; }
+.offer-card:hover { box-shadow: 0 18px 42px rgba(102, 56, 28, .14); transform: translateY(-4px); }
+.offer-card-image-wrap { aspect-ratio: 1.45 / 1; overflow: hidden; position: relative; }
+.offer-card-image { height: 100%; object-fit: cover; transition: transform .4s ease; width: 100%; }
+.offer-card:hover .offer-card-image { transform: scale(1.04); }
+.offer-card-label { background: var(--description-tomato); border-radius: 3px; bottom: 13px; color: #fff; font-size: 10px; font-weight: 700; left: 13px; letter-spacing: .1em; padding: 8px 10px; position: absolute; text-transform: uppercase; }
+.offer-card-content { padding: 20px 19px 18px; }
+.offer-card-title-row { align-items: start; display: flex; gap: 16px; justify-content: space-between; }
+.offer-card h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 24px; font-weight: 600; line-height: 1.04; margin: 0; }
+.offer-card-title-row strong { color: var(--description-tomato); font-size: 14px; white-space: nowrap; }
+.offer-card-content > p { color: var(--description-muted); font-size: 12px; line-height: 1.55; margin: 13px 0 19px; }
+.offer-card-meta { align-items: center; border-top: 1px solid var(--description-line); color: var(--description-muted); display: flex; font-size: 11px; justify-content: space-between; padding-top: 13px; }
+.offer-card-meta > span:first-child { color: var(--description-ink); font-weight: 700; }
+.offer-star { color: #e9a52d; }
+.daily-deals-section { border-top: 1px solid var(--description-line); padding-top: 68px; }
+
+@media (max-width: 560px) {
+  .description-page { padding-top: 52px; }
+  .description-intro, .description-section { padding-left: 22px; padding-right: 22px; }
+  .description-intro { padding-bottom: 56px; }
+  .description-section-heading { align-items: start; flex-direction: column; gap: 11px; }
+  .description-scroll-hint { align-self: end; }
+}
