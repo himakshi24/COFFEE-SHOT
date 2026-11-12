@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Description.css'
 
-const API_URL = 'https://coffee-shot-production.up.railway.app/api'
+const API_URL = process.env.REACT_APP_API_URL || 'https://coffee-shot-production.up.railway.app/api'
 
 const stars = [1, 2, 3, 4, 5]
 

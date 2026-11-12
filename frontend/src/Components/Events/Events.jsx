@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useMemo, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Events.css'
 
-const API_URL = 'https://coffee-shot-production.up.railway.app/api'
+const API_URL = process.env.REACT_APP_API_URL || 'https://coffee-shot-production.up.railway.app/api'
 
 // Admin panel data contract: replace these records with event API data later.
 export const contestSlides = [

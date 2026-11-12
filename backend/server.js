@@ -37,7 +37,22 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 
 connectDB();
 
-app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:3000' }));
+const allowedOrigins = new Set(
+  (process.env.CLIENT_URL || '')
+    .split(',')
+    .map((origin) => origin.trim().replace(/\/+$/, ''))
+    .filter(Boolean)
+);
+
+if (process.env.NODE_ENV === 'production' && allowedOrigins.size === 0) {
+  throw new Error('CLIENT_URL must be set to the deployed frontend origin in production.');
+}
+
+if (process.env.NODE_ENV !== 'production') {
+  allowedOrigins.add('http://localhost:3000');
+}
+
+app.use(cors({ origin: [...allowedOrigins] }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(morgan('dev'));

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import './Offers.css'
 
-const API_URL = 'https://coffee-shot-production.up.railway.app/api'
+const API_URL = process.env.REACT_APP_API_URL || 'https://coffee-shot-production.up.railway.app/api'
 
 const normalizeMenuItem = (item) => ({
   id: item._id || item.id,
