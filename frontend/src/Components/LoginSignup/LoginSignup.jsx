@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './LoginSignup.css'
 
-const API_URL = 'http://localhost:5000/api'
+const API_URL = 'https://coffee-shot-production-74c235d7.up.railway.app/api'
 
 const LoginSignup = () => {
   const navigate = useNavigate()

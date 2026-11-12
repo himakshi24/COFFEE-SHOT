@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './Description.css'
 
-const API_URL = 'http://localhost:5000/api'
+const API_URL = 'https://coffee-shot-production-74c235d7.up.railway.app/api'
 
 const stars = [1, 2, 3, 4, 5]
 
