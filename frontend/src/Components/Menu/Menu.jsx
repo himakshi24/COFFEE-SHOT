@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import './Menu.css'
 
-const API_URL = 'https://coffee-shot-production-74c235d7.up.railway.app/api'
+const API_URL = 'https://coffee-shot-production.up.railway.app/api'
 
 export let menuItems = []
 
